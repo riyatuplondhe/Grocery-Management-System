@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grocery Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🛒 Grocery Management System</h1>
+        <p>Manage your grocery products and inventory</p>
+    </header>
+
+    <main>
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Products</h3>
+                <p id="totalProducts">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Stock</h3>
+                <p id="totalStock">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Inventory Value</h3>
+                <p id="inventoryValue">₹0</p>
+            </div>
+
+        </section>
+
+        <!-- Add Product -->
+        <section class="form-section">
+
+            <h2>Add Grocery Product</h2>
+
+            <form id="productForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Product Name"
+                    required
+                >
+
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Dairy">Dairy</option>
+                    <option value="Bakery">Bakery</option>
+                    <option value="Grains">Grains</option>
+                    <option value="Beverages">Beverages</option>
+                    <option value="Snacks">Snacks</option>
+                </select>
+
+                <input
+                    type="number"
+                    id="price"
+                    placeholder="Price"
+                    min="0"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="stock"
+                    placeholder="Stock"
+                    min="0"
+                    required
+                >
+
+                <button type="submit">
+                    Add Product
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Search -->
+        <section class="search-section">
+
+            <h2>Search Products</h2>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search product..."
+            >
+
+        </section>
+
+        <!-- Product List -->
+        <section class="products-section">
+
+            <h2>Product Inventory</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="productTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Grocery Management System | CI/CD Experiment 3</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
